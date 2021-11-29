@@ -1,0 +1,68 @@
+
+.gamespace {
+    margin: auto;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    max-width: 600px;
+}
+
+.tile {
+    border: 2.5px solid black;
+    min-width: 100px;
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#start {
+    height: 25px;
+    width: auto;
+    font-size: large;
+}
+
+#player {
+    text-align: center;
+}
+
+
+#tile_1,
+#tile_2,
+#tile_3 {
+    border-top: none;
+}
+
+#tile_1,
+#tile_4,
+#tile_7 {
+    border-left: none;
+}
+
+#tile_7,
+#tile_8,
+#tile_9 {
+    border-bottom: none;
+}
+
+#tile_3,
+#tile_6,
+#tile_9 {
+    border-right: none;
+}
+
+
+.restart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    width: auto;
+    font-size: large;
+}
+
+#currentPlayer{
+    font-size: 30px;
+    text-shadow: 4px 4px 15px #2F97C1;
+}
