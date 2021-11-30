@@ -60,10 +60,74 @@ const changePlayer = function() {
     }
 }
 
+function winCheck() {
+    if(gameBoard[0] === "X" && gameBoard[1] === "X" && gameBoard[2] === "X"){
+        document.getElementById("status").innerText = x_won
+        return gameStarted = false
+    } else if(gameBoard[0] === "O" && gameBoard[1] === "O" && gameBoard[2] === "O") {
+        document.getElementById("status").innerText = o_won
+        return gameStarted = false
+    } 
+    if(gameBoard[3] === "X" && gameBoard[4] === "X" && gameBoard[5] === "X"){
+        document.getElementById("status").innerText = x_won
+        return gameStarted = false
+    } else if(gameBoard[3] === "O" && gameBoard[4] === "O" && gameBoard[5] === "O") {
+        document.getElementById("status").innerText = o_won
+        return gameStarted = false
+    }
+    if(gameBoard[6] === "X" && gameBoard[7] === "X" && gameBoard[8] === "X"){
+        document.getElementById("status").innerText = x_won
+        return gameStarted = false
+    } else if(gameBoard[6] === "O" && gameBoard[7] === "O" && gameBoard[8] === "O") {
+        document.getElementById("status").innerText = o_won
+        return gameStarted = false
+    }
+    if(gameBoard[0] === "X" && gameBoard[3] === "X" && gameBoard[6] === "X"){
+        document.getElementById("status").innerText = x_won
+        return gameStarted = false
+    } else if(gameBoard[0] === "O" && gameBoard[3] === "O" && gameBoard[6] === "O") {
+        document.getElementById("status").innerText = o_won
+        return gameStarted = false
+    }
+    if(gameBoard[1] === "X" && gameBoard[4] === "X" && gameBoard[7] === "X"){
+        document.getElementById("status").innerText = x_won
+        return gameStarted = false
+    } else if(gameBoard[1] === "O" && gameBoard[4] === "O" && gameBoard[7] === "O") {
+        document.getElementById("status").innerText = o_won
+        return gameStarted = false
+    }
+    if(gameBoard[2] === "X" && gameBoard[5] === "X" && gameBoard[8] === "X"){
+        document.getElementById("status").innerText = x_won
+        return gameStarted = false
+    } else if(gameBoard[2] === "O" && gameBoard[5] === "O" && gameBoard[8] === "O") {
+        document.getElementById("status").innerText = o_won
+        return gameStarted = false
+    }
+    if(gameBoard[0] === "X" && gameBoard[4] === "X" && gameBoard[8] === "X"){
+        document.getElementById("status").innerText = x_won
+        return gameStarted = false
+    } else if(gameBoard[0] === "O" && gameBoard[4] === "O" && gameBoard[8] === "O") {
+        document.getElementById("status").innerText = o_won
+        return gameStarted = false
+    }
+    if(gameBoard[2] === "X" && gameBoard[4] === "X" && gameBoard[6] === "X"){
+        document.getElementById("status").innerText = x_won
+        return gameStarted = false
+    } else if(gameBoard[2] === "O" && gameBoard[4] === "O" && gameBoard[6] === "O") {
+        document.getElementById("status").innerText = o_won
+        return gameStarted = false
+    }
+    if (!gameBoard.includes("")) {
+        document.getElementById("status").innerText = draw
+    }
+}
+
+
 const tileClick = function(tiles, index) {
     if(isValid(tiles) && gameStarted === true) {
         tiles.innerText = currentPlayer
         boardUpdate(index)
+        winCheck()
         changePlayer()
     }
 }
@@ -74,20 +138,6 @@ gameTiles.forEach(function(tiles, index){
     })
 })
 
-const win = [
-    [0, 1, 2],
-    [3, 4, 5],
-    [6, 7, 8],
-    [0, 3, 6],
-    [1, 4, 7],
-    [2, 5, 8],
-    [0, 4, 8],
-    [2, 4, 6],
-]
-
-function winCheck() {
-    
-}
 
 restart.addEventListener("click", function(event){
     event.preventDefault
@@ -99,4 +149,6 @@ restart.addEventListener("click", function(event){
         tiles.innerText = " "
     })
     gameStarted = false
+
+    document.getElementById("status").innerText = ""
 })
