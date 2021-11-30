@@ -8,13 +8,19 @@
     max-width: 600px;
 }
 
-.tile {
+.tiles {
     border: 2.5px solid black;
     min-width: 100px;
     min-height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: bolder;
+    font-size: 100px;
+}
+
+#player {
+    text-align: center;
 }
 
 #start {
@@ -22,11 +28,6 @@
     width: auto;
     font-size: large;
 }
-
-#player {
-    text-align: center;
-}
-
 
 #tile_1,
 #tile_2,
@@ -52,8 +53,12 @@
     border-right: none;
 }
 
+#status {
+    text-align: center;
+}
 
-.restart {
+.restart,
+#restart {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,7 +67,7 @@
     font-size: large;
 }
 
-#currentPlayer{
+.currentPlayer{
     font-size: 30px;
     text-shadow: 4px 4px 15px #2F97C1;
 }
