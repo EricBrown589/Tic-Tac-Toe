@@ -1,4 +1,8 @@
 
+body {
+    background-color: #0B0014;
+}
+
 .gamespace {
     margin: auto;
     padding: 15px;
@@ -9,7 +13,7 @@
 }
 
 .tiles {
-    border: 2.5px solid black;
+    border: 2.5px solid #FF715B;
     min-width: 100px;
     min-height: 150px;
     display: flex;
@@ -17,10 +21,12 @@
     align-items: center;
     font-weight: bolder;
     font-size: 100px;
+    color: white;
 }
 
 #player {
     text-align: center;
+    color: #97EAD2;
 }
 
 #start {
@@ -55,6 +61,7 @@
 
 #status {
     text-align: center;
+    color: #97EAD2;
 }
 
 .restart,
@@ -69,5 +76,5 @@
 
 .currentPlayer{
     font-size: 30px;
-    text-shadow: 4px 4px 15px #2F97C1;
+    text-shadow: 3px 3px 10px #5badce;
 }
