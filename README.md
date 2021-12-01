@@ -17,7 +17,7 @@ This is a basic Tic Tac Toe game I made for a class project.
 
 I made this using vanilla html, css, and javascript
 
-### Planning and Development 
+## Planning and Development 
 
 - I started by drawing up a basic wireframe, but my design ended up changing part way through development due what I was able to do within the timeframe and my knowledge of coding.
 - I made the game board using HTML and CSS. I made a section in HTML and then made 9 divs in the section for the tiles. In CSS I added grid styling to the section so the tiles would appear as a tic tac toe board and used flex on the divs so the content (X and O) would be centered within the tile elements within the grid. I also made the Player One, Two and both buttons in HTML and used CSS to style them and center them in the screen.
