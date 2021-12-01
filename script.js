@@ -64,56 +64,64 @@ function winCheck() {
     if(gameBoard[0] === "X" && gameBoard[1] === "X" && gameBoard[2] === "X") {
         document.getElementById("status").innerText = x_won
         return gameStarted = false
-    } else if(gameBoard[0] === "O" && gameBoard[1] === "O" && gameBoard[2] === "O") {
+    } 
+    if(gameBoard[0] === "O" && gameBoard[1] === "O" && gameBoard[2] === "O") {
         document.getElementById("status").innerText = o_won
         return gameStarted = false
     } 
     if(gameBoard[3] === "X" && gameBoard[4] === "X" && gameBoard[5] === "X") {
         document.getElementById("status").innerText = x_won
         return gameStarted = false
-    } else if(gameBoard[3] === "O" && gameBoard[4] === "O" && gameBoard[5] === "O") {
+    } 
+    if(gameBoard[3] === "O" && gameBoard[4] === "O" && gameBoard[5] === "O") {
         document.getElementById("status").innerText = o_won
         return gameStarted = false
     }
     if(gameBoard[6] === "X" && gameBoard[7] === "X" && gameBoard[8] === "X") {
         document.getElementById("status").innerText = x_won
         return gameStarted = false
-    } else if(gameBoard[6] === "O" && gameBoard[7] === "O" && gameBoard[8] === "O") {
+    } 
+    if(gameBoard[6] === "O" && gameBoard[7] === "O" && gameBoard[8] === "O") {
         document.getElementById("status").innerText = o_won
         return gameStarted = false
     }
     if(gameBoard[0] === "X" && gameBoard[3] === "X" && gameBoard[6] === "X") {
         document.getElementById("status").innerText = x_won
         return gameStarted = false
-    } else if(gameBoard[0] === "O" && gameBoard[3] === "O" && gameBoard[6] === "O") {
+    } 
+    if(gameBoard[0] === "O" && gameBoard[3] === "O" && gameBoard[6] === "O") {
         document.getElementById("status").innerText = o_won
         return gameStarted = false
     }
     if(gameBoard[1] === "X" && gameBoard[4] === "X" && gameBoard[7] === "X") {
         document.getElementById("status").innerText = x_won
         return gameStarted = false
-    } else if(gameBoard[1] === "O" && gameBoard[4] === "O" && gameBoard[7] === "O") {
+    }
+    if(gameBoard[1] === "O" && gameBoard[4] === "O" && gameBoard[7] === "O") {
         document.getElementById("status").innerText = o_won
         return gameStarted = false
     }
     if(gameBoard[2] === "X" && gameBoard[5] === "X" && gameBoard[8] === "X") {
         document.getElementById("status").innerText = x_won
         return gameStarted = false
-    } else if(gameBoard[2] === "O" && gameBoard[5] === "O" && gameBoard[8] === "O") {
+    }
+    if(gameBoard[2] === "O" && gameBoard[5] === "O" && gameBoard[8] === "O") {
         document.getElementById("status").innerText = o_won
         return gameStarted = false
     }
     if(gameBoard[0] === "X" && gameBoard[4] === "X" && gameBoard[8] === "X") {
         document.getElementById("status").innerText = x_won
         return gameStarted = false
-    } else if(gameBoard[0] === "O" && gameBoard[4] === "O" && gameBoard[8] === "O") {
+    } 
+    if(gameBoard[0] === "O" && gameBoard[4] === "O" && gameBoard[8] === "O") {
         document.getElementById("status").innerText = o_won
         return gameStarted = false
     }
     if(gameBoard[2] === "X" && gameBoard[4] === "X" && gameBoard[6] === "X") {
         document.getElementById("status").innerText = x_won
         return gameStarted = false
-    } else if(gameBoard[2] === "O" && gameBoard[4] === "O" && gameBoard[6] === "O") {
+    }
+    if(gameBoard[2] === "O" && gameBoard[4] === "O" && gameBoard[6] === "O") {
         document.getElementById("status").innerText = o_won
         return gameStarted = false
     }
@@ -130,7 +138,7 @@ const tileClick = function(tiles, index) {
         winCheck()
         changePlayer()
     }
-} //says what will happen when a tile is click
+} //says what will happen when a tile is clicked
 
 gameTiles.forEach(function(tiles, index) {
     tiles.addEventListener("click", function() {
